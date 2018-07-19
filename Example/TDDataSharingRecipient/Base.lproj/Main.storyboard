@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ten-a7-I95">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="m4a-6M-qwa">
+            <objects>
+                <viewController id="Ten-a7-I95" customClass="ViewController" customModule="DataSharingFirst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X5O-rZ-3F8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVp-TS-HPf">
+                                <rect key="frame" x="0.0" y="581" width="375" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtN-y9-nSQ">
+                                        <rect key="frame" x="234.5" y="13.5" width="124.5" height="30"/>
+                                        <state key="normal" title="UNDO">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoAction:" destination="Ten-a7-I95" eventType="touchUpInside" id="vJ6-Ct-lHF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Remove last added object from payload " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEB-zP-3Pv">
+                                        <rect key="frame" x="16" y="8" width="202.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="JtN-y9-nSQ" firstAttribute="leading" secondItem="GEB-zP-3Pv" secondAttribute="trailing" constant="16" id="EAM-Gv-F84"/>
+                                    <constraint firstAttribute="trailing" secondItem="JtN-y9-nSQ" secondAttribute="trailing" constant="16" id="FNe-tc-oaZ"/>
+                                    <constraint firstItem="GEB-zP-3Pv" firstAttribute="top" secondItem="OVp-TS-HPf" secondAttribute="top" constant="8" id="d98-LM-mIO"/>
+                                    <constraint firstItem="JtN-y9-nSQ" firstAttribute="centerY" secondItem="GEB-zP-3Pv" secondAttribute="centerY" id="f5d-jf-iln"/>
+                                    <constraint firstItem="GEB-zP-3Pv" firstAttribute="leading" secondItem="OVp-TS-HPf" secondAttribute="leading" constant="16" id="yFB-eQ-NTd"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k70-La-3yJ">
+                                <rect key="frame" x="8" y="20" width="164" height="30"/>
+                                <state key="normal" title="Add image From Gallery"/>
+                                <connections>
+                                    <action selector="addImageAction:" destination="Ten-a7-I95" eventType="touchUpInside" id="rsh-XH-Eqn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHY-s6-vfG">
+                                <rect key="frame" x="8" y="181" width="359" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8dJ-NL-DiS">
+                                <rect key="frame" x="8" y="257" width="359" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="552918286.36635804">
+                                    <!--2018-07-10 12:24:46 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-MU-dfF">
+                                <rect key="frame" x="167" y="543" width="40" height="30"/>
+                                <state key="normal" title="SEND"/>
+                                <connections>
+                                    <action selector="sendButtonAction:" destination="Ten-a7-I95" eventType="touchUpInside" id="QTY-Ag-5U0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYX-aX-tqQ">
+                                <rect key="frame" x="8" y="481" width="359" height="30"/>
+                                <state key="normal" title="Add date"/>
+                                <connections>
+                                    <action selector="addDateAction:" destination="Ten-a7-I95" eventType="touchUpInside" id="bNU-B6-37a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR8-iD-Wy4">
+                                <rect key="frame" x="8" y="219" width="359" height="30"/>
+                                <state key="normal" title="Add text"/>
+                                <connections>
+                                    <action selector="addTextAction:" destination="Ten-a7-I95" eventType="touchUpInside" id="xmW-mr-MVz"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vbc-eF-y0J">
+                                <rect key="frame" x="87.5" y="58" width="200" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="be3-5D-kJJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last selected image" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pId-7h-KDU">
+                                <rect key="frame" x="8" y="58" width="71.5" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fug-G6-70J">
+                                <rect key="frame" x="0.0" y="560" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HR8-iD-Wy4" firstAttribute="leading" secondItem="Tft-zh-w6d" secondAttribute="leading" constant="8" id="5Ob-G5-vTq"/>
+                            <constraint firstItem="tHY-s6-vfG" firstAttribute="leading" secondItem="Tft-zh-w6d" secondAttribute="leading" constant="8" id="7kD-Kp-6ex"/>
+                            <constraint firstItem="OVp-TS-HPf" firstAttribute="top" secondItem="6gG-MU-dfF" secondAttribute="bottom" constant="8" id="8sg-q9-9I4"/>
+                            <constraint firstItem="Vbc-eF-y0J" firstAttribute="centerX" secondItem="X5O-rZ-3F8" secondAttribute="centerX" id="AHN-ae-i5i"/>
+                            <constraint firstAttribute="trailing" secondItem="OVp-TS-HPf" secondAttribute="trailing" id="Dim-bO-cVf"/>
+                            <constraint firstItem="KYX-aX-tqQ" firstAttribute="leading" secondItem="Tft-zh-w6d" secondAttribute="leading" constant="8" id="KZw-7p-w7S"/>
+                            <constraint firstAttribute="trailing" secondItem="8dJ-NL-DiS" secondAttribute="trailing" constant="8" id="MSm-Fu-2d5"/>
+                            <constraint firstItem="6gG-MU-dfF" firstAttribute="top" secondItem="8dJ-NL-DiS" secondAttribute="bottom" constant="70" id="Mpt-5C-MOp"/>
+                            <constraint firstItem="Tft-zh-w6d" firstAttribute="trailing" secondItem="tHY-s6-vfG" secondAttribute="trailing" constant="8" id="PNv-UO-Nuq"/>
+                            <constraint firstItem="Vbc-eF-y0J" firstAttribute="top" secondItem="k70-La-3yJ" secondAttribute="bottom" constant="8" id="UR0-Pr-up0"/>
+                            <constraint firstItem="6gG-MU-dfF" firstAttribute="centerX" secondItem="X5O-rZ-3F8" secondAttribute="centerX" id="V7y-5H-wWG"/>
+                            <constraint firstItem="k70-La-3yJ" firstAttribute="top" secondItem="Tft-zh-w6d" secondAttribute="top" id="dix-zK-r27"/>
+                            <constraint firstItem="8dJ-NL-DiS" firstAttribute="top" secondItem="HR8-iD-Wy4" secondAttribute="bottom" constant="8" id="hA5-le-dht"/>
+                            <constraint firstItem="8dJ-NL-DiS" firstAttribute="leading" secondItem="Tft-zh-w6d" secondAttribute="leading" constant="8" id="hDH-AP-j6P"/>
+                            <constraint firstItem="OVp-TS-HPf" firstAttribute="top" secondItem="Tft-zh-w6d" secondAttribute="bottom" constant="-86" id="hJA-cu-DEU"/>
+                            <constraint firstItem="k70-La-3yJ" firstAttribute="leading" secondItem="X5O-rZ-3F8" secondAttribute="leading" constant="8" id="jcK-f2-sCC"/>
+                            <constraint firstItem="tHY-s6-vfG" firstAttribute="top" secondItem="Vbc-eF-y0J" secondAttribute="bottom" constant="8" id="mN1-3g-4MN"/>
+                            <constraint firstItem="pId-7h-KDU" firstAttribute="leading" secondItem="Tft-zh-w6d" secondAttribute="leading" constant="8" id="mvB-b2-sDr"/>
+                            <constraint firstItem="Tft-zh-w6d" firstAttribute="trailing" secondItem="KYX-aX-tqQ" secondAttribute="trailing" constant="8" id="nxh-PD-9hf"/>
+                            <constraint firstItem="KYX-aX-tqQ" firstAttribute="top" secondItem="8dJ-NL-DiS" secondAttribute="bottom" constant="8" id="oGh-Lf-e0x"/>
+                            <constraint firstItem="Fug-G6-70J" firstAttribute="leading" secondItem="Tft-zh-w6d" secondAttribute="leading" id="pHp-WB-IDZ"/>
+                            <constraint firstItem="OVp-TS-HPf" firstAttribute="leading" secondItem="Tft-zh-w6d" secondAttribute="leading" id="po8-ZU-VwS"/>
+                            <constraint firstItem="HR8-iD-Wy4" firstAttribute="top" secondItem="tHY-s6-vfG" secondAttribute="bottom" constant="8" id="qiH-TM-xbW"/>
+                            <constraint firstItem="Tft-zh-w6d" firstAttribute="trailing" secondItem="HR8-iD-Wy4" secondAttribute="trailing" constant="8" id="qqE-cr-3iS"/>
+                            <constraint firstItem="pId-7h-KDU" firstAttribute="top" secondItem="k70-La-3yJ" secondAttribute="bottom" constant="8" id="sPX-B4-enM"/>
+                            <constraint firstItem="OVp-TS-HPf" firstAttribute="top" secondItem="Fug-G6-70J" secondAttribute="bottom" id="ujd-3t-eC9"/>
+                            <constraint firstItem="Vbc-eF-y0J" firstAttribute="leading" secondItem="pId-7h-KDU" secondAttribute="trailing" constant="8" id="vJ5-MR-0m8"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="k70-La-3yJ" secondAttribute="trailing" constant="20" symbolic="YES" id="wPY-X5-eRF"/>
+                            <constraint firstAttribute="bottom" secondItem="OVp-TS-HPf" secondAttribute="bottom" id="yDc-LB-s22"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tft-zh-w6d"/>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="Fug-G6-70J" id="eMP-Rx-nGz"/>
+                        <outlet property="datePicker" destination="8dJ-NL-DiS" id="iiD-vw-tGO"/>
+                        <outlet property="imageView" destination="Vbc-eF-y0J" id="8bU-nO-OR3"/>
+                        <outlet property="textField" destination="tHY-s6-vfG" id="QEu-aD-2yX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pmy-br-BDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541.60000000000002" y="587.85607196401804"/>
+        </scene>
+    </scenes>
+</document>
